@@ -64,7 +64,9 @@ function calculateTicketPrice({
     if (isWeekend){
         summ = summ - (summ * 0.2)
     }
-    if (                                                                                                                                                           )
+    if (isEvening ) {
+        summ = summ - (summ * 0.1)
+    }                                                                                                                                                          )
 
   }
   else{
