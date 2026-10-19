@@ -59,6 +59,7 @@ function calculateTicketPrice({
   hasStudentCard,
 }) {
   let summ = basePrice
+  let endsumm = 0
   if (aactionTyttrpe == "детский" && age >= 0  && height >= 80) {
     
     if (isWeekend){
@@ -66,8 +67,17 @@ function calculateTicketPrice({
     }
     if (isEvening ) {
         summ = summ - (summ * 0.1)
-    }                                                                                                                                                          )
-
+    }                                                                                                                                                          
+    if (isEvening  && isWeekend) {
+        summ = summ - (summ * 0.3)
+    } 
+    if (ihasStudentCard ) {
+        endsumm = summ - (summ * 0.15)
+    } 
+    if (ihasStudentCard ) {
+        endsumm = summ - (summ * 0.15)
+    } 
+    
   }
   else{
     return null
